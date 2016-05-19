@@ -1,5 +1,10 @@
 var app = angular.module('QuickApp', ['ngMaterial']);
 
+app.config(['$mdIconProvider',function($mdIconProvider) {
+  $mdIconProvider
+    .defaultIconSet('/res/mdi.svg')
+}]);
+
 app.controller('MainController', ['$scope', '$mdToast', function($scope,$mdToast) {
 	
 	$scope.title = 'Welcome...';
